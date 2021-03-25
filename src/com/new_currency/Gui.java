@@ -1,5 +1,10 @@
 package com.new_currency;
 
+// COMMITS:
+	// added about item and icon
+	// added events listener to about item
+	// removed event listener from actionPerformed method
+
 import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.Dimension;
@@ -61,6 +66,7 @@ public class Gui extends JFrame implements ActionListener {
 	JMenuItem item1;
 	JMenuItem item2;
 	JMenuItem item3;
+	JMenuItem item4;
 	
 	double ans = 0;
 
@@ -100,16 +106,14 @@ public class Gui extends JFrame implements ActionListener {
 		menu1.setIcon(file);
 		menu2.setIcon(about);
 		//Doesn't work for me
-		menu2.addActionListener(e -> {
-			JOptionPane.showMessageDialog(this, aboutMe, "About", JOptionPane.INFORMATION_MESSAGE);
-			System.out.print("About me");
-		});
+		
 		//Doesn't work for me
 		menu2.addActionListener(this);
 		
 		item1 = new JMenuItem("More Apps..");
 		item2 = new JMenuItem("Share");
 		item3 = new JMenuItem("Exit");
+		item4 = new JMenuItem("About currency Converter");
 		
 		//Set mnemonics for items
 		item1.setMnemonic(KeyEvent.VK_M);
@@ -120,14 +124,19 @@ public class Gui extends JFrame implements ActionListener {
 		item1.setIcon(add);
 		item2.setIcon(share);
 		item3.setIcon(exit);
+		item4.setIcon(about);
 		
 		item3.addActionListener(e -> System.exit(1));
+		item4.addActionListener(e -> {
+			JOptionPane.showMessageDialog(this, aboutMe, "About", JOptionPane.INFORMATION_MESSAGE);
+//			System.out.print("About me");
+		});
 		
 		// Add menu items to File menu
 		menu1.add(item1);
 		menu1.add(item2);
 		menu1.add(item3);
-		
+		menu2.add(item4);
 		// Add menus to menu bar
 		menuBar.add(menu1);
 		menuBar.add(menu2);
