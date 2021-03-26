@@ -1,9 +1,6 @@
 package com.new_currency;
 
-// COMMITS:
-	// added about item and icon
-	// added events listener to about item
-	// removed event listener from actionPerformed method
+
 
 import java.awt.BorderLayout;
 import java.awt.Color;
