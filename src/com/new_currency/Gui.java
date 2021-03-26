@@ -227,8 +227,7 @@ public class Gui extends JFrame implements ActionListener {
 //		inputField.setBorder(border);
 //		this.add(from);
 //		this.add(to);
-//		this.add(inputField);
-//		panelContent.add(infoLabel);
+
 	
 		insideContent1.add(infoLabel);
 		insideContent1.add(inputField);
